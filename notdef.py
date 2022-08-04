@@ -59,10 +59,13 @@ fb.setupCharacterMap({1: "the_glyph"})
 # spec: subtable format 13 should only be used under platform ID 0 and encoding ID 6.
 # https://github.com/behdad/tofudetector/blob/master/tofu.ttx uses 3/10 and that seems to work.
 cmap_many_to_one = cmap_classes[13](13)
+# Works
 cmap_many_to_one.platformID = 3
 cmap_many_to_one.platEncID = 10
-# cmap_many_to_one.platformID = 6
-# cmap_many_to_one.platEncID = 0
+# Doesn't work
+# cmap_many_to_one.platformID = 0
+# cmap_many_to_one.platEncID = 6
+
 cmap_many_to_one.language = 0
 cmap_many_to_one.cmap = {cp: "the_glyph" for cp in range(0x10FFFF + 1) if cp > 1}
 
