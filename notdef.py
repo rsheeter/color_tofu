@@ -61,6 +61,8 @@ fb.setupCharacterMap({1: "the_glyph"})
 cmap_many_to_one = cmap_classes[13](13)
 cmap_many_to_one.platformID = 3
 cmap_many_to_one.platEncID = 10
+# cmap_many_to_one.platformID = 6
+# cmap_many_to_one.platEncID = 0
 cmap_many_to_one.language = 0
 cmap_many_to_one.cmap = {cp: "the_glyph" for cp in range(0x10FFFF + 1) if cp > 1}
 
